@@ -1,0 +1,272 @@
+.splash-section {
+  min-height: 700px;
+  padding: 250px 0 175px 0;
+  background: url('../img/splash-bg.png') no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  .splash-heading {
+    font-size: 91px;
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+.search-wrapper {
+  background-color: #000;
+  position: relative;
+  
+  &__input {
+    .icon-search {
+      position: absolute;
+      top: 13px;
+      left: 27px;
+      background: none;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+    
+    input {
+      display: block;
+      background-color: #4c4c4c;
+      border: none;
+      height: 50px;
+      width: 250px;
+      outline: none;
+      padding: 0 0 0 50px;
+      color: #fff;
+      @include transition(.4s);
+
+      &:focus {
+        width: 100%;
+      }
+    }
+  }
+
+  &__list {
+    padding: 35px 0;
+    position: relative;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+    
+    .no-results {
+      color: #fff;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 2px;
+          left: 0;
+          width: 17px;
+          height: 17px;
+          border: 8px solid transparent;
+          border-left-color: $b-yellow;
+        }
+
+        a {
+          display: inline-block;
+          font-size: 22px;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: $b-yellow;
+        }
+      }
+    }
+  }
+}
+
+.hide-results {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.repeat-heading {
+  font-size: 30px;
+  font-weight: 500;
+  color: $b-brown;
+  text-transform: uppercase;
+  margin: 0 0 70px 0;
+}
+
+.catalog-wrap {
+  height: 570px;
+
+  &.active {
+    height: auto;
+  }
+}
+
+.catalog-grid {
+  position: relative;
+}
+
+.catalog-col {
+  width: 20%;
+  border-right: 1px solid #d7d7d7;
+  padding: 0 35px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  min-height: 280px;
+  background-color: #fff;
+  z-index: 100;
+  @include transition(.5s);
+
+  &:nth-child(1) {
+    left: 0;
+  }
+
+  &:nth-child(2) {
+    left: 20%;
+  }
+
+  &:nth-child(3) {
+    left: 40%;
+  }
+
+
+  &:nth-child(4) {
+    left: 60%;
+  }
+
+  &:nth-child(5) {
+    left: 80%;
+  }
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    border-color: transparent;
+
+    .catalog-col__heading,
+    .catalog-col__description {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    border: none;
+  }
+
+  &__img {
+    height: 145px;
+    margin-bottom: 35px;
+    text-align: center;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__heading {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    &.color1 {
+      color: $b-brown;
+    }
+
+    &.color2 {
+      color: $b-green;
+    }
+
+    &.color3 {
+      color: $b-red;
+    }
+
+    &.color4 {
+      color: $b-purple;
+    }
+
+    &.color5 {
+      color: $b-blue;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    font-weight: 500;
+    color: #5a5a5a;
+  }
+}
+
+.sub-category-grid {
+  padding-left: 20%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  @include transition(.5s);
+
+  &.show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.sub-category-col {
+  width: 25%;
+  padding: 0 35px;
+
+  &__img {
+    height: 160px;
+    text-align: center;
+    margin-bottom: 35px;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    .list-item {
+      margin-bottom: 10px;
+      color: $b-brown;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
+
+.catalog-details {
+  background-color: $b-bg;
+}
