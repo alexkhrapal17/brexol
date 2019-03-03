@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<!-- <base href="/"> -->
 
-		<title>OptimizedHTML 4</title>
+		<title>Brexol</title>
 		<meta name="description" content="">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +24,10 @@
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 		<!-- Fonts End -->
 
+		<!-- Slick slider Start -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<!-- Slick slider End -->
+
 		<link rel="stylesheet" href="css/main.min.css">
 
 	</head>
@@ -38,15 +42,20 @@
 					</a>
 				</div>
 				<nav class="main-header__nav d-flex align-items-center">
-					<div class="dropdown-search">
+					<a href="#search" class="nav-item dropdown-search">
 						<img src="img/icons/icon-book.png" alt="">
-
-					</div>
+					</a>
 					<a class="nav-item" href="#select">Підбір</a>
 					<a class="nav-item" href="#media">Медіа</a>
 					<a class="nav-item" href="#brexol">Brexol</a>
 					<a class="nav-item" href="#where-by">Де купити</a>
 				</nav>
+
+				<div class="mobile-menu-button">
+					<span class="line1"></span>
+					<span class="line2"></span>
+					<span class="line3"></span>
+				</div>
 			</div>
 		</header>
 
@@ -61,7 +70,7 @@
 				</div>
 			</div>
 
-			<div class="search-wrapper">
+			<section id="search" class="search-wrapper">
 				<div class="wrapper">
 					<div class="search-wrapper__input">
 						<input type="search">
@@ -81,7 +90,7 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</section>
 
 			<section class="section-wrap catalog-wrap">
 				<div class="wrapper">
@@ -171,12 +180,310 @@
 
 			<section class="section-wrap catalog-details">
 				<div class="wrapper">
-					123
+					<span class="hide-results">
+						<img src="img/icons/icon-close.png" alt="">
+					</span>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="catalog-details__img">
+								<img src="img/oilXL.png" alt="">
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="catalog-details__info">
+								<h4 class="info-heading">
+									ULTRA 5W30 <br>
+									<mark>Synthetic</mark>
+								</h4>
+								<span class="info-type">API SN/CF</span>
+								<span class="info-models">VW 502.00/505.00 • MB 229.5 • Opel GM-LL-B-025 • BMW LL-04 • Renault RN 0700/0710</span>
+								<p class="info-description">Синтетичне всесезонне моторне мастило для легкових автівок, з подовженим сервісним інтервалом. Суттєво зменшує витрату палива. Для бензинових, дизельних і турбодизельних двигунів. Гарантує легкий запуск та якісне мащення двигуна при низьких температурах.</p>
+								<div class="info-volume">
+									<img src="img/icons/icon-canister.png" alt="">
+									<span class="volume">1 л • 4 л • 10 л • 20 л • 60 л • 200 л</span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
+
+			<section id="select" class="section-wrap select-oil">
+				<div class="wrapper">
+					<h2 class="repeat-heading">ПОДБОР МАСЛА ПО АВТОМОБИЛЮ</h2>
+
+					<div class="row">
+						<div class="col-md-8">
+							<form action="#">
+								<div class="row">
+									<div class="col-md-7">
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="select-wrap">
+													<select>
+														<option value="">Марка автомобиля</option>
+														<option value="">Марка автомобиля 1</option>
+														<option value="">Марка автомобиля 2</option>
+														<option value="">Марка автомобиля 3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="select-wrap">
+													<select>
+														<option value="">Модель</option>
+														<option value="">Модель 1</option>
+														<option value="">Модель 2</option>
+														<option value="">Модель 3</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="select-wrap">
+													<select>
+														<option value="">Модификация</option>
+														<option value="">Модификация 1</option>
+														<option value="">Модификация 2</option>
+														<option value="">Модификация 3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="select-wrap">
+													<select>
+														<option value="">Тип топлива</option>
+														<option value="">Тип топлива 1</option>
+														<option value="">Тип топлива 2</option>
+														<option value="">Тип топлива 3</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="select-btn-wrap">
+											<button type="submit">ПОДОБРАТЬ</button>
+										</div>
+									</div>
+									<div class="col-md-5">
+										<div class="select-info">
+											<span class="select-info__txt">TRUCK SHPD SUPERIOR 15W40</span>
+											<span class="select-info__txt">TRUCK POWER SB LONG 10W40</span>
+											<span class="select-info__txt">ULTRA 5W40</span>
+
+											<span class="select-info__type-fuel">3.5 L</span>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-md-4">
+							<div class="select-oil-img">
+								<img src="img/select-oil-img.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="media" class="section-wrap section-news">
+				<div class="wrapper">
+					<h2 class="repeat-heading">Новинарня</h2>
+
+					<div class="d-flex news-grid">
+						<div class="news-col">
+							<div class="news-col__img">
+								<img src="img/news1.png" alt="">
+							</div>
+							<div class="news-col__body">
+								<h3 class="news-heading">НОВАЯ ЛИНЕЙКА МОТОРНЫХ МАСЕЛ</h3>
+								<p class="news-description">Трансмисcионное масло для мостов и механических трансмиссий</p>
+							</div>
+						</div>
+						<div class="news-col">
+							<div class="news-col__img">
+								<img src="img/news2.png" alt="">
+							</div>
+							<div class="news-col__body">
+								<h3 class="news-heading">ЗАПАС МОЩНОСТИ — НЕ МИФ</h3>
+								<p class="news-description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</p>
+							</div>
+						</div>
+						<div class="news-col">
+							<div class="news-col__img">
+								<img src="img/news3.png" alt="">
+							</div>
+							<div class="news-col__body">
+								<h3 class="news-heading">ЛУЧШИЙ МЕНЕДЖЕР МЕСЯЦА</h3>
+								<p class="news-description">Есть много вариантов Lorem Ipsum</p>
+							</div>
+						</div>
+						<div class="news-col">
+							<div class="news-col__img">
+								<img src="img/news4.png" alt="">
+							</div>
+							<div class="news-col__body">
+								<h3 class="news-heading">НАЛЕТАЙ!</h3>
+								<p class="news-description">Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов.</p>
+							</div>
+						</div>
+						<div class="news-col">
+							<div class="news-col__img">
+								<img src="img/news5.png" alt="">
+							</div>
+							<div class="news-col__body">
+								<h3 class="news-heading">HONDA РЕКОМЕНДУЕТ</h3>
+								<p class="news-description">Lorem Ipsum — это текст-рыба, часто используемый в печати и вэб-дизайне.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section-wrap news-details">
+				<div class="wrapper">
+					<span class="hide-results">
+						<img src="img/icons/icon-close.png" alt="">
+					</span>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="news-details__img">
+								<img src="img/news-detail.png" alt="">
+							</div>
+						</div>
+						<div class="col-md-7">
+							<div class="news-details__info">
+								<h3 class="info-heading">Opel готує доступні новинки для українського ринку</h3>
+								<p class="info-description">Opel Astra буде пропонуватись у двох комплектаціях та буде мати два варіанти силових установок. Стартова ціна — 445 тисяч гривень. Insignia матиме більш широкий вибір комплектацій та більш різноманітну моторну лінійку. Будуть навіть доступні версії з повним приводом.</p>
+								<p class="info-description">Відносно доступний кроссовер Crossland X буде коштувати як мінімум 519 тисяч гривень. Його старший брат Grandland X буде оцінений як мінімум в 668 тис. грн. Проте вони не зможуть похизуватись різноманіттям двигунів та коробок передач. Його старший брат Grandland X буде оцінений як мінімум в 668 тис. грн. Проте вони не зможуть похизуватись різноманіттям двигунів та коробок передач. Його старший брат Grandland X буде оцінений як мінімум в 668 тис. грн. Проте вони не зможуть похизуватись різноманіттям двигунів та коробок передач. Його старший брат Grandland X буде оцінений як мінімум в 668 тис. грн. Проте вони не зможуть похизуватись різноманіттям двигунів та коробок передач.</p>
+								<p class="info-description">Плани з продажів помірні – за весь 2019 рік має бути продано лише 1100 автомобілів бренду Opel.</p>
+
+								<a href="#" class="link-news">
+									https://auto.24tv.ua/tag/avtobiznes_tag70
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="brexol" class="section-wrap section-brexol">
+				<div class="wrapper">
+					<div class="row">
+						<div class="col-md-5">
+							<div class="section-brexol__img">
+								<img src="img/brexol-logo.png" alt="">
+							</div>
+						</div>
+						<div class="col-md-7">
+							<div class="section-brexol__info">
+								<h2 class="repeat-heading">BREXOL® — ТВІЙ ЗАПАС ПОТУЖНОСТІ</h2>
+
+								<p class="info-description">Автомобільні мастила Brexol® були створені завдяки британській інвестиційній групі «D. B. Development Services Limited», яка в 2015 році заснувала лабораторію з дослідження та розробки рецептур моторних мастил «Brexol Chemical». До складу синтетичних продуктів були включені високомолекулярні вуглеводні та поліальфаолефіни.</p>
+								<p class="info-description">Сьогодні під торговою маркою Brexol® випускаються моторні, трансмісійні та гідравлічні мастила з використанням найновіших технологій виробництва. Завдяки власному збагаченому пакету присадок та використанню базових мастил BP, двигуни, в яких працюють мастила Brexol®, отримують додатковий запас потужності.</p>
+								<p class="info-description">Від серпня 2018 року Brexol® в Україні ексклюзивно представляє компанія «Омега».</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="slider">
+				<div class="slider__slide" style="background-image: url('img/slider-img.png');"></div>
+				<div class="slider__slide" style="background-image: url('img/splash-bg.png');"></div>
+			</div>
+
+			<section id="where-by" class="section-wrap find-region">
+				<div class="wrapper">
+					<div class="row align-items-center">
+						<div class="col-md-5">
+							<h2 class="repeat-heading">ЗНАЙДИ BREXOL® <br>У СВОЄМУ РЕГІОНІ</h2>
+						</div>
+						<div class="col-md-7">
+							<div class="row">
+								<div class="col-md-8">
+									<div class="select-wrap border-outline">
+										<select>
+											<option value="">Регіон</option>
+											<option value="">Регіон 1</option>
+											<option value="">Регіон 2</option>
+											<option value="">Регіон 3</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="select-btn-wrap">
+										<button type="submit">ПОДОБРАТЬ</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="find-region-results">
+				<div class="wrapper">
+					<div class="search-wrapper__list" style="display: block;">
+						<!--<span class="no-results">Немає варіантів</span>-->
+						<span class="hide-results">
+							<img src="img/icons/icon-close.png" alt="">
+						</span>
+						<ul>
+							<li><a href="#">«Автокорт» Черкаси, вул. Петра Сутулого, 19/70а, тел. +380 (22) 456 789 00</a></li>
+							<li><a href="#">«Автокорт» Черкаси, вул. Петра Сутулого, 19/70а, тел. +380 (22) 456 789 00</a></li>
+							<li><a href="#">«Автокорт» Черкаси, вул. Петра Сутулого, 19/70а, тел. +380 (22) 456 789 00</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</main>
+		<footer class="main-footer">
+			<div class="wrapper">
+				<div class="row align-items-center">
+					<div class="col-lg-3">
+						<span class="footer-txt">© 2018 Brexol™</span>
+						<span class="footer-txt">© 2018 D. B. Development Services Ltd.</span>
+					</div>
+					<div class="col-lg-3">
+						<div class="phone-wrap">
+							<div class="row">
+								<div class="col-lg-6">
+									<a href="tel:057 713 69 00">057 713 69 00</a>
+									<a href="tel:067 623 69 00">067 623 69 00</a>
+								</div>
+								<div class="col-lg-6">
+									<a href="tel:093 623 69 00">093 623 69 00</a>
+									<a href="tel:050 403 69 00">050 403 69 00</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<a href="mailto:office@omega-auto.biz" class="contact-link email">office@omega-auto.biz</a>
+						<a href="skype:skype.omega-auto.biz?call" class="contact-link skype">skype.omega-auto.biz</a>
+					</div>
+					<div class="col-lg-3">
+						<div class="footer-social">
+							<a href="#" class="footer-social__link">
+								<img src="img/icons/icon-instagram.png" alt="">
+							</a>
+							<a href="#" class="footer-social__link">
+								<img src="img/icons/icon-twitter.png" alt="">
+							</a>
+							<a href="#" class="footer-social__link">
+								<img src="img/icons/icon-facebook.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
 
 		<script src="js/scripts.min.js"></script>
+		<!-- Slick slider Start -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<!-- Slick slider End -->
 
 	</body>
 </html>

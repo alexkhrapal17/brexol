@@ -9,6 +9,11 @@
   z-index: 1000;
   @include transition(.2s);
 
+  @include media-breakpoint-down(sm) {
+    border-width: 5px;
+    height: 53px;
+  }
+
   &.scroll-class {
     background-color: #eee;
 
@@ -37,20 +42,68 @@
       position: absolute;
       margin-top: -18px;
 
+      @include media-breakpoint-down(sm) {
+        margin-top: -5px;
+      }
+
       img {
         @include transition(.2s);
+
+        &.logo {
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
+        }
 
         &.logo-scroll {
           opacity: 0;
           visibility: hidden;
           position: absolute;
           top: 0;
+
+          @include media-breakpoint-down(sm) {
+            opacity: 1;
+            visibility: visible;
+            width: 80px;
+          }
         }
       }
     }
   }
 
   &__nav {
+    @include transition(.4s);
+
+    @include media-breakpoint-down(sm) {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 100vh;
+      background-color: #eee;
+      display: block !important;
+      padding: 53px 15px 15px 15px;
+      //overflow: auto;
+
+      &.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 1000px;
+        height: 100%;
+        background: rgba(0, 0, 0, .5);
+      }
+    }
+
     .nav-item {
       display: block;
       margin: 0 25px -2px 25px;
@@ -60,6 +113,15 @@
       text-decoration: none;
       @include transition(.2s);
 
+      @include media-breakpoint-down(md) {
+        margin: 0 15px -2px 15px;
+        font-size: 15px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin: 0 0 10px 0;
+      }
+
       &:hover, &.active {
         border-color: #535353;
       }
@@ -67,6 +129,65 @@
       &:last-child {
         margin-right: 0;
       }
+    }
+  }
+}
+
+.mobile-menu-button {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-right: -10px;
+    z-index: 101;
+    transform-origin: center;
+  }
+
+  &.open {
+    span {
+      background: #333;
+
+      &.line1 {
+        top: 13px;
+        transform: rotate(-45deg) translateX(-50%);
+      }
+
+      &.line2 {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-20px);
+      }
+
+      &.line3 {
+        bottom: 13px;
+        transform: rotate(45deg) translateX(-50%);
+      }
+    }
+  }
+
+  span {
+    display: block;
+    width: 23px;
+    height: 2px;
+    background-color: #000;
+    @include transition(.3s);
+    @include center(horizontal);
+
+    &.line1 {
+      top: 13px;
+    }
+
+    &.line2 {
+      top: 50%;
+      margin-top: -1px;
+    }
+    &.line3 {
+      bottom: 13px;
     }
   }
 }
@@ -81,6 +202,20 @@
   margin: 0 25px;
   cursor: pointer;
 
+  @include media-breakpoint-down(sm) {
+    height: 35px;
+    width: 100%;
+    padding: 9px 5px;
+
+    img {
+      width: 20px;
+    }
+  }
+
+  &:hover {
+    border: none;
+  }
+
   &:after {
     content: '';
     display: inline-block;
@@ -90,6 +225,10 @@
     border: 8px solid transparent;
     border-top-color: #ac6908;
     margin: 10px 0 0 5px;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 }
 
