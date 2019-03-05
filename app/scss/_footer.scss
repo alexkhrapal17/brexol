@@ -31,6 +31,7 @@
     color: #777;
     font-size: 12px;
     margin-bottom: 5px;
+    white-space: nowrap;
 
     @include media-breakpoint-down(lg) {
       margin-bottom: 20px;
@@ -83,7 +84,7 @@
   }
 
   @include media-breakpoint-down(sm) {
-    text-align: center;
+
   }
 
   &__link {
@@ -94,6 +95,10 @@
 
     &:hover {
       opacity: .7;
+    }
+
+    &:first-child {
+      margin-left: 0;
     }
 
     &:last-child {

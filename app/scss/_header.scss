@@ -15,10 +15,13 @@
   }
 
   &.scroll-class {
-    background-color: #eee;
+    background-color: #dedede;
 
     .main-header__logo {
       a {
+        width: 150px;
+        height: 100px;
+
         img {
           &.logo-scroll {
             opacity: 1;
@@ -41,15 +44,20 @@
       display: block;
       position: absolute;
       margin-top: -18px;
+      width: 190px;
+      height: 209px;
 
       @include media-breakpoint-down(sm) {
         margin-top: -5px;
+        width: 80px;
+        height: 53px;
       }
 
       img {
         @include transition(.2s);
 
         &.logo {
+          position: absolute;
           @include media-breakpoint-down(sm) {
             display: none;
           }
